@@ -4,9 +4,9 @@
 - [x] Lazy plugin manager
 - [x] Tokyonight theme
 - [x] Telescope
-- [ ] Treesitter
+- [x] Treesitter
 - [ ] Harpoon
 - [ ] One-liners
-- [ ] LSP
-- [ ] Autocomplete
+- [x] LSP
+- [x] Autocomplete
 - [ ] Snippets 
