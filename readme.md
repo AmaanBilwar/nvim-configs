@@ -9,4 +9,5 @@
 - [ ] One-liners
 - [x] LSP
 - [x] Autocomplete
-- [ ] Snippets 
+- [ ] Snippets
+- [x] Add opencode
