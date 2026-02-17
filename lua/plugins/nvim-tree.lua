@@ -14,6 +14,14 @@ return {
 
 		require("nvim-tree").setup({
 			on_attach = on_attach,
+			filesystem_watchers = {
+				enable = true,
+				debounce_delay = 50,
+			},
+			update_focused_file = {
+				enable = true,
+				update_root = true,
+			},
 			view = {
 				width = 30,
 				side = "left",
