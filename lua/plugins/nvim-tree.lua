@@ -1,42 +1,26 @@
 return {
-	"nvim-tree/nvim-tree.lua",
-	dependencies = { "nvim-tree/nvim-web-devicons" },
+	"nvim-neo-tree/neo-tree.nvim",
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+		"nvim-tree/nvim-web-devicons",
+		"MunifTanjim/nui.nvim",
+	},
 	config = function()
-		local api = require("nvim-tree.api")
-
-		local function on_attach(bufnr)
-			api.config.mappings.default_on_attach(bufnr)
-			vim.keymap.set("n", "s", api.node.open.horizontal, { buffer = bufnr, desc = "Open: Horizontal Split" })
-			vim.keymap.set("n", "v", api.node.open.vertical, { buffer = bufnr, desc = "Open: Vertical Split" })
-			vim.keymap.set("n", "<C-w>s", api.node.open.horizontal, { buffer = bufnr, desc = "Open: Horizontal Split" })
-			vim.keymap.set("n", "<C-w>v", api.node.open.vertical, { buffer = bufnr, desc = "Open: Vertical Split" })
-		end
-
-		require("nvim-tree").setup({
-			on_attach = on_attach,
-			filesystem_watchers = {
-				enable = true,
-				debounce_delay = 50,
+		require("neo-tree").setup({
+			sources = { "filesystem", "buffers", "git_status" },
+			filesystem = {
+				bind_to_cwd = false,
+				follow_current_file = { enabled = true },
+				use_libuv_file_watcher = true,
 			},
-			update_focused_file = {
-				enable = true,
-				update_root = true,
-			},
-			view = {
-				width = 30,
-				side = "left",
-			},
-			renderer = {
-				indent_markers = { enable = true },
-			},
-			filters = {
-				dotfiles = false,
-			},
-			git = {
-				enable = true,
+			window = {
+				mappings = {
+					["l"] = "open",
+					["h"] = "close_node",
+				},
 			},
 		})
 
-		vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle file tree" })
+		vim.keymap.set("n", "<leader>e", "<cmd>Neotree toggle<cr>", { desc = "Toggle file tree" })
 	end,
 }
