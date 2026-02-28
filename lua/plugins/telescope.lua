@@ -34,8 +34,10 @@ return {
 				'!.git/*',
 				'--glob',
 				'!node_modules/*',
+				'--glob',
 				'!target/*',
-				'.helix/*'
+				'--glob',
+				'!.helix/*',
 			},
 		})
 	end, { desc = 'Telescope find files (all)' })
