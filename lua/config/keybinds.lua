@@ -1,2 +1,2 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>cd", vim.cmd.NvimTreeToggle)
+vim.keymap.set("n", "<leader>cd", "<cmd>Neotree toggle<cr>")
