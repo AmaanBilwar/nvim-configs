@@ -1,6 +1,10 @@
 vim.opt.number = true
 vim.opt.cursorline = true
 vim.opt.relativenumber = true
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.breakindent = true
+vim.opt.showbreak = ">> "
 vim.opt.shiftwidth = 4
 vim.opt.clipboard = "unnamedplus"
 vim.g.loaded_netrw = 1
