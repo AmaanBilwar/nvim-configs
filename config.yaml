@@ -24,13 +24,13 @@ layout:
 workspaces:
   - name: "1"
     display_name: "1"
-    keep_alive: true
+    keep_alive: false
   - name: "2"
     display_name: "2"
-    keep_alive: true
+    keep_alive: false
   - name: "3"
     display_name: "3"
-    keep_alive: true
+    keep_alive: false
 gaps:
   # Gap between adjacent windows.
   inner_gap: "0px"
