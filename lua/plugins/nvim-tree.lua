@@ -1,26 +1,20 @@
 return {
-	"nvim-neo-tree/neo-tree.nvim",
-	dependencies = {
-		"nvim-lua/plenary.nvim",
-		"nvim-tree/nvim-web-devicons",
-		"MunifTanjim/nui.nvim",
-	},
+	"stevearc/oil.nvim",
+	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
-		require("neo-tree").setup({
-			sources = { "filesystem", "buffers", "git_status" },
-			filesystem = {
-				bind_to_cwd = false,
-				follow_current_file = { enabled = true },
-				use_libuv_file_watcher = true,
+		require("oil").setup({
+			default_file_explorer = true,
+			columns = { "icon" },
+			confirm_single_subdir = true,
+			explorer = {
+				hl = "Dash",
 			},
-			window = {
-				mappings = {
-					["l"] = "open",
-					["h"] = "close_node",
-				},
+			view_options = {
+				show_hidden = false,
 			},
 		})
 
-		vim.keymap.set("n", "<leader>e", "<cmd>Neotree toggle<cr>", { desc = "Toggle file tree" })
+		vim.keymap.set("n", "<leader>e", "<cmd>Oil --float<cr>", { desc = "Open parent directory" })
+		vim.keymap.set("n", "-", "<cmd>Oil<cr>", { desc = "Open parent directory" })
 	end,
 }
