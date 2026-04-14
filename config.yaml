@@ -49,7 +49,7 @@ window_effects:
     # ** Exclusive to Windows 11 due to API limitations.
     border:
       enabled: true
-      color: "#b4befe"
+      color: "#000000"
 
   # Visual effects to apply to non-focused windows.
   other_windows:
