@@ -288,10 +288,14 @@ keybindings:
         "shell-exec C:\\Users\\amaan\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Helium.lnk https://github.com/amaanbilwar",
       ]
     bindings: ["alt+g"]
-  # - commands:
-  #     [
-  #       "shell-exec C:\\Users\\amaan\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Wezterm.lnk",
-  #     ]
-  #   bindings: ["alt+w"]
-  - commands: ["shell-exec C:\\Program Files\\PowerShell\\7\\pwsh.exe"]
+
+  # open wezterm
+  - commands:
+      [
+        "shell-exec C:\\Users\\amaan\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Wezterm.lnk",
+      ]
     bindings: ["alt+w"]
+
+  # open pwsh
+  # - commands: ["shell-exec C:\\Program Files\\PowerShell\\7\\pwsh.exe"]
+  #   bindings: ["alt+w"]
