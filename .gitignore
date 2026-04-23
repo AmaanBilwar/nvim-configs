@@ -1,3 +1,5 @@
 .git/
 lazy-lock.json
 
+config.bat
+node_modules
